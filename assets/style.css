@@ -8,7 +8,6 @@
 
 .menu-cs-prt {
 
-  position: absolute;
   opacity: 0;
   pointer-events: none;
 
@@ -23,7 +22,6 @@
 @media screen and (max-width:900px) {
 
   .menu-cs-prt {
-    position: relative;
     opacity: 1;
     pointer-events: all;
   }
