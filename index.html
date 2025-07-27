@@ -127,8 +127,8 @@
                                     </div>
                                 </div>
                                 <div class="main-menu">
-                                    <a class="rs-menu-toggle"><i class="fa fa-bars"></i></a>
-                                    <nav class="rs-menu">
+                                    <a class="rs-menu-toggle" id="btn-tooggle-menu"><i class="fa fa-bars"></i></a>
+                                    <nav class="rs-menu" id="menu-tooggle">
                                         <ul class="nav-menu menu-cs">
                                             <li>
                                                 <a href="#">
@@ -664,6 +664,26 @@
         </div>
     </div>
     <!-- Search Modal End -->
+
+    <script>
+        const btn = document.querySelector("#btn-tooggle-menu")
+        const menu = document.querySelector("#menu-tooggle")
+        menu.setAttribute("class", "rs-menu rs-menu-close")
+        var menuStatus = false
+        if (btn) {
+            menu.addEventListener("click", () => {
+
+                if (menuStatus) {
+                    menu.setAttribute("class", "rs-menu rs-menu-close")
+                    menuStatus = false
+                } else {
+                    menu.setAttribute("class", "rs-menu")
+                    menuStatus = true
+                }
+
+            })
+        }
+    </script>
 
     <!-- modernizr js -->
     <script src="/assets/js/modernizr-2.8.3.min.js"></script>
