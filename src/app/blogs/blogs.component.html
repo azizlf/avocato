@@ -1,0 +1,42 @@
+<div class="rs-breadcrumbs innerbg10" id="headerBlogs">
+    <div class="container">
+        <div class="breadcrumbs-inner text-center">
+            <h1 class="breadcrumbs-title white-color">المنشورات</h1>
+            <ul class="breadcrumbs-meta">
+                <li>
+                    <a routerLink="/">
+                        الصفحة الرئيسية
+                    </a>
+                </li>
+                <li>
+                    المنشورات
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="rs-blog inner gray-bg pt-120 pb-90 md-pt-80 md-pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-30" *ngFor="let blog of blogService.blogs">
+                <div class="blog-item">
+                    <div class="blog-image">
+                        <img [src]="blog.image" alt="Blog Image">
+                    </div>
+                    <div class="text-bottom">
+                        <h3 class="title2"><a [routerLink]="'/blog/'+blog.id"> {{blog.title}} </a></h3>
+                        <ul class="blog-meta">
+                            <li>{{blog.date}}</li>
+                        </ul>
+                        <div class="blog-desc">{{blog.description}}</div>
+                        <div class="blog-btn mt-17">
+                            <a [routerLink]="'/blog/'+blog.id" class="readon2">
+                                المزيد
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

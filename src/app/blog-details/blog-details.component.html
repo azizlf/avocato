@@ -1,0 +1,40 @@
+<div class="rs-breadcrumbs innerbg2" id="headerBlogs">
+    <div class="container">
+        <div class="breadcrumbs-inner text-center">
+            <h1 class="breadcrumbs-title white-color">{{blog.title}}</h1>
+            <ul class="breadcrumbs-meta">
+                <li>
+                    <a routerLink="/blogs">
+                        المنشورات
+                    </a>
+                </li>
+                <li>
+                    المنشور
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="rs-blog inner gray-bg pt-120 pb-120 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="blog-item mb-60 xs-mb-30">
+                    <div class="blog-image">
+                        <img [src]="blog.image" alt="Blog Image">
+                    </div>
+                    <div class="text-bottom">
+                        <h3 class="title" style="text-align: right;"><a href="#">{{blog.title}}</a>
+                        </h3>
+                        <ul class="blog-meta" style="text-align: right;">
+                            <li>{{blog.date}}</li>
+                        </ul>
+                        <div class="blog-desc" style="text-align: right;">
+                            {{blog.description}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
