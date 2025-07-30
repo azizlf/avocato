@@ -1,3 +1,104 @@
+<div class="full-width-header header-transparent2">
+    <!--Header Start-->
+    <header id="rs-header" class="rs-header">
+        <!-- Menu Start -->
+        <div class="menu-area menu-sticky">
+            <div class="top-part hidden-md">
+                <div class="container">
+                    <div class="row rs-vertical-middle">
+                        <div class="col-md-3">
+                            <div class="logo-area">
+                                <a routerLink="/"><img src="/assets/logo.png" alt="logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <ul class="info-address">
+                                <li>
+                                    <div class="address">
+                                        <div class="icon-part">
+                                            <i class="flaticon-call"></i>
+                                        </div>
+                                        <div class="content-part">
+                                            <span class="title">
+                                                إتصل بنا:</span>
+                                            <a href="tel:+21696225134">+216 96 225 134</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="address">
+                                        <div class="icon-part">
+                                            <i class="flaticon-email"></i>
+                                        </div>
+                                        <div class="content-part">
+                                            <span class="title">
+                                                البريد الالكتروني:</span>
+                                            <a href="mailto:support@rstheme.com">support rstheme.com</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="address">
+                                        <div class="icon-part">
+                                            <i class="flaticon-location"></i>
+                                        </div>
+                                        <div class="content-part">
+                                            <span class="title">
+                                                التوقيت:</span>
+                                            <p class="margin-0 white-color">8h - 20h</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-part menu-cs-prt">
+                <div class="container">
+                    <div class="row rs-vertical-middle">
+                        <div class="col-lg-8">
+                            <div class="logo-md">
+                                <div class="logo-area">
+                                    <a routerLink="/"><img src="/assets/logo.png" alt="logo"></a>
+                                </div>
+                            </div>
+                            <div class="main-menu">
+                                <a class="rs-menu-toggle" id="btn-tooggle-menu"><i class="fa fa-bars"></i></a>
+                                <nav class="rs-menu" id="menu-tooggle">
+                                    <ul class="nav-menu menu-cs">
+                                        <li>
+                                            <a (click)="goToSection(aboutSection)">
+                                                من نحن
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a (click)="goToSection(servicesSection)">
+                                                مجالاتنا
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a (click)="goToSection(formSection)">
+                                                إستشارة قانونية
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a (click)="goToSection(blogsSection)">
+                                                منشوراتنا
+                                            </a>
+                                        </li>
+                                    </ul> <!-- //.nav-menu -->
+                                </nav>
+                            </div> <!-- //.main-menu -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Menu End -->
+    </header>
+    <!--Header End-->
+</div>
 <div class="main-content">
     <!-- Slider Start -->
     <div id="rs-slider" class="rs-slider slider2">
@@ -101,7 +202,7 @@
     <!-- Services End -->
 
     <!-- About Section Start -->
-    <div id="rs-about" class="rs-about style1 pt-120 pb-120 md-pt-80 md-pb-78">
+    <div id="rs-about" #aboutSection class="rs-about style1 pt-120 pb-120 md-pt-80 md-pb-78">
         <div class="container">
             <div class="row rs-vertical-middle">
                 <div class="col-lg-7 pl-45 md-pl-15" data-aos="fade-right" data-aos-duration="1500">
@@ -130,7 +231,7 @@
     <!-- About Section End -->
 
     <!-- Our Practice Areas Start -->
-    <div class="rs-our-practice style1 title-bg pt-114 pb-120 md-pt-72 md-pb-80">
+    <div #servicesSection class="rs-our-practice style1 title-bg pt-114 pb-120 md-pt-72 md-pb-80">
         <div class="container">
             <div class="sec-title top-line text-center mb-49 xs-mb-31">
                 <div class="sub-title primary">
@@ -218,7 +319,7 @@
     <!-- Our Practice Areas END -->
 
     <!-- About Section Start -->
-    <div id="rs-about" class="rs-about style2 pt-120 pb-120 md-pt-80 md-pb-80">
+    <div id="rs-about" #formSection class="rs-about style2 pt-120 pb-120 md-pt-80 md-pb-80">
         <div class="container padding-0 md-pl-pr-15">
             <div class="wraping gray-bg">
                 <div class="row rs-vertical-middle">
@@ -277,7 +378,7 @@
     </div>
     <!-- About Section End -->
 
-    <div class="rs-blog inner gray-bg pt-120 pb-90 md-pt-80 md-pb-50">
+    <div class="rs-blog inner gray-bg pt-120 pb-90 md-pt-80 md-pb-50" #blogsSection>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mb-30" *ngFor="let blog of blogService.blogs">

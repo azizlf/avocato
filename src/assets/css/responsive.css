@@ -398,7 +398,6 @@
     }
     .full-width-header .rs-header .menu-area.sticky {
         position: inherit;
-        background: transparent !important;
         box-shadow: none;
     }
     .full-width-header.header-transparent.modify {

@@ -13,12 +13,23 @@
 }
 
 .nivo-prevNav,
-.nivo-nextNav{
+.nivo-nextNav {
   opacity: 0 !important;
   pointer-events: none;
 }
 
 @media screen and (max-width:900px) {
+
+  .full-width-header .rs-header .menu-area.sticky {
+    position: fixed !important;
+    box-shadow: none !important;
+  }
+
+  .full-width-header .rs-header .menu-area.sticky i{
+
+    color: #101010 !important;
+
+  }
 
   .menu-cs-prt {
     display: block;
